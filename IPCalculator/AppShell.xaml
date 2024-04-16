@@ -8,7 +8,7 @@
     Title="IPCalculator">
 
     <ShellContent
-        Title="Home"
+        Title="IP Calculator by Samuele Pecci"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
 

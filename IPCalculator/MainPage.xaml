@@ -7,23 +7,50 @@
         <VerticalStackLayout
             Padding="30,0"
             Spacing="25">
-            <Label
-                Text="IP Calculator"
-                Style="{StaticResource Headline}"
-                SemanticProperties.HeadingLevel="Level1" />
+
+
+            <HorizontalStackLayout>
+                <Label
+                    Text="IP address:"
+                    Style="{StaticResource SubHeadline}"
+                    SemanticProperties.HeadingLevel="Level1"
+                    WidthRequest="200" />
+
+                <Entry
+                   x:Name="IPAddress"
+                   Placeholder="Enter IP address"
+                   MinimumWidthRequest="150"
+                   MaximumWidthRequest="150"
+                   HorizontalTextAlignment="Center" />
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout>
+                <Label
+                    Text="Subnet mask:"
+                    Style="{StaticResource SubHeadline}"
+                    SemanticProperties.HeadingLevel="Level1"
+                    WidthRequest="200" />
+
+                <Entry
+                    x:Name="SubnetMask"
+                    Placeholder="Enter subnet mask"
+                    MinimumWidthRequest="150"
+                    MaximumWidthRequest="150"
+                    HorizontalTextAlignment="Center" />
+
+                <Button
+                    x:Name="CalculateBtn"
+                    Text="Calculate" 
+                    SemanticProperties.Hint="Calculate all"
+                    Clicked="Calculate"
+                    HorizontalOptions="Fill"
+                    Margin="10,0,0,0" />
+            </HorizontalStackLayout>
 
             <Label
                 Text="Welcome to IP Calculator by Samuele Pecci"
-                Style="{StaticResource SubHeadline}"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
+                SemanticProperties.HeadingLevel="Level3" />
 
-            <Button
-                x:Name="CounterBtn"
-                Text="Calcola" 
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Fill" />
         </VerticalStackLayout>
     </ScrollView>
 
