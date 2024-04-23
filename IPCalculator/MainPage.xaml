@@ -4,17 +4,149 @@
              x:Class="IPCalculator.MainPage">
 
     <ScrollView>
-        <VerticalStackLayout
-            Padding="30,0"
-            Spacing="25">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
 
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            
+            <Label
+                Grid.Column="0"
+                Grid.Row="0"
+                Text="IP address:"
+                Style="{StaticResource SubHeadline}"
+                SemanticProperties.HeadingLevel="Level1"
+                Margin="10" />
+
+            <Entry
+                Margin="10"
+                Grid.Column="1"
+                Grid.Row="0"
+                x:Name="IPAddress"
+                Placeholder="Enter IP address"
+                HorizontalTextAlignment="Center" />
+
+            <Label
+                Grid.Column="0"
+                Grid.Row="1"
+                Text="Subnet mask:"
+                Style="{StaticResource SubHeadline}"
+                SemanticProperties.HeadingLevel="Level1"
+                MaximumWidthRequest="250" 
+                Margin="10" />
+
+            <Entry
+                Margin="10"
+                Grid.Column="1"
+                Grid.Row="1"
+                x:Name="SubnetMask"
+                Placeholder="Enter subnet mask"
+                HorizontalTextAlignment="Center" />
+
+            <Button
+                Margin="50, 20"
+                Grid.Column="0"
+                Grid.Row="2"
+                Grid.ColumnSpan="2"
+                x:Name="CalculateBtn"
+                Text="Calculate"
+                SemanticProperties.Hint="Calculate all"
+                Clicked="Calculate"
+                HorizontalOptions="Fill" />
+
+            <Label
+                Grid.Column="0"
+                Grid.Row="3"
+                Text="Network address:"
+                Style="{StaticResource SubHeadline}"
+                SemanticProperties.HeadingLevel="Level1"
+                Margin="10" />
+
+            <Entry
+                Grid.Column="1"
+                Grid.Row="3"
+                Margin="10"
+                x:Name="NetworkAddress"
+                Placeholder=""
+                IsReadOnly="True"
+                HorizontalTextAlignment="Center" />
+
+            <Label
+                Grid.Column="0"
+                Grid.Row="4"
+                Text="Broadcast address:"
+                Style="{StaticResource SubHeadline}"
+                SemanticProperties.HeadingLevel="Level1"
+                Margin="10" />
+
+            <Entry
+                Grid.Column="1"
+                Grid.Row="4"
+                Margin="10"
+                x:Name="BroadcastAddress"
+                Placeholder=""
+                IsReadOnly="True"
+                HorizontalTextAlignment="Center" />
+
+            <Label
+                Grid.Column="0"
+                Grid.Row="5"
+                Text="First host:"
+                Style="{StaticResource SubHeadline}"
+                SemanticProperties.HeadingLevel="Level1"
+                Margin="10" />
+
+            <Entry
+                Grid.Column="1"
+                Grid.Row="5"
+                Margin="10"
+                x:Name="FirstHost"
+                Placeholder=""
+                IsReadOnly="True"
+                HorizontalTextAlignment="Center" />
+
+            <Label
+                Grid.Column="0"
+                Grid.Row="6"
+                Text="Last host:"
+                Style="{StaticResource SubHeadline}"
+                SemanticProperties.HeadingLevel="Level1"
+                Margin="10" />
+
+            <Entry
+                Grid.Column="1"
+                Grid.Row="6"
+                Margin="10"
+                x:Name="LastHost"
+                Placeholder=""
+                IsReadOnly="True"
+                HorizontalTextAlignment="Center" />
+        </Grid>
+
+
+        <!-- <VerticalStackLayout
+            Padding="20,15"
+            Spacing="20">
 
             <HorizontalStackLayout>
                 <Label
                     Text="IP address:"
                     Style="{StaticResource SubHeadline}"
                     SemanticProperties.HeadingLevel="Level1"
-                    WidthRequest="200" />
+                    MaximumWidthRequest="250"
+                    Margin="10" />
 
                 <Entry
                    x:Name="IPAddress"
@@ -29,7 +161,8 @@
                     Text="Subnet mask:"
                     Style="{StaticResource SubHeadline}"
                     SemanticProperties.HeadingLevel="Level1"
-                    WidthRequest="200" />
+                    MaximumWidthRequest="250" 
+                    Margin="10" />
 
                 <Entry
                     x:Name="SubnetMask"
@@ -47,11 +180,45 @@
                     Margin="10,0,0,0" />
             </HorizontalStackLayout>
 
+            <HorizontalStackLayout>
+                <Label
+                    Text="Network address:"
+                    Style="{StaticResource SubHeadline}"
+                    SemanticProperties.HeadingLevel="Level1"
+                    MaximumWidthRequest="250" 
+                    Margin="10" />
+
+                <Entry
+                   x:Name="NetworkAddress"
+                   Placeholder=""
+                   MinimumWidthRequest="150"
+                   MaximumWidthRequest="150"
+                   IsReadOnly="True"
+                   HorizontalTextAlignment="Center" />
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout>
+                <Label
+                    Text="Broadcast address:"
+                    Style="{StaticResource SubHeadline}"
+                    SemanticProperties.HeadingLevel="Level1"
+                    WidthRequest="250" 
+                    Margin="10" />
+
+                <Entry
+                   x:Name="BroadcastAddress"
+                   Placeholder=""
+                   MinimumWidthRequest="150"
+                   MaximumWidthRequest="150"
+                   IsReadOnly="True"
+                   HorizontalTextAlignment="Center" />
+            </HorizontalStackLayout>
+
             <Label
                 Text="Welcome to IP Calculator by Samuele Pecci"
                 SemanticProperties.HeadingLevel="Level3" />
 
-        </VerticalStackLayout>
+        </VerticalStackLayout> -->
     </ScrollView>
 
 </ContentPage>
